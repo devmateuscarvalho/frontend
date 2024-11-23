@@ -1,3 +1,3 @@
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-Made by devmateuscarvalho
+git clone https://github.com/devmateuscarvalho/frontend.git
+npm install
+npm run dev
