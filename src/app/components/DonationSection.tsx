@@ -46,13 +46,13 @@ export default function DonationSection() {
           </div>
           <div className="flex flex-col space-y-1">
             <a
-              href="https://github.com/desenvolvedor2"
+              href="https://github.com/Phssilva"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center text-black hover:text-gray-800 text-sm"
             >
               <Github className="w-4 h-4 mr-2" />
-              phsilva
+              Phssilva
             </a>
             <a
               href="https://github.com/devmateuscarvalho"

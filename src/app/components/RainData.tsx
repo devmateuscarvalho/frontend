@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/app/components/ui/card";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/app/components/ui/table";
 
 export default function RainData() {
     const data = [
@@ -13,15 +14,24 @@ export default function RainData() {
                 <CardTitle>Dados Recentes de Chuvas</CardTitle>
             </CardHeader>
             <CardContent>
-                <ul className="space-y-4">
-                    {data.map((item, index) => (
-                        <li key={index} className="flex justify-between text-sm">
-                            <span className="font-medium">{item.city}</span>
-                            <span>{item.rain}</span>
-                            <span className="text-muted-foreground">{item.date}</span>
-                        </li>
-                    ))}
-                </ul>
+                <Table>
+                    <TableHeader>
+                        <TableRow>
+                            <TableHead>Cidade</TableHead>
+                            <TableHead>Chuva</TableHead>
+                            <TableHead>Data</TableHead>
+                        </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                        {data.map((item, index) => (
+                            <TableRow key={index}>
+                                <TableCell className="font-medium">{item.city}</TableCell>
+                                <TableCell>{item.rain}</TableCell>
+                                <TableCell>{item.date}</TableCell>
+                            </TableRow>
+                        ))}
+                    </TableBody>
+                </Table>
             </CardContent>
         </Card>
     );
