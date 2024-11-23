@@ -13,23 +13,25 @@ const customIcon = L.icon({
 });
 
 export default function DynamicMap() {
-    const position: [number, number] = [-23.55052, -46.633308];
+    // Centro e zoom ajustados para exibir o Brasil inteiro
+    const centerPosition: [number, number] = [-14.235004, -51.92528]; // Coordenadas aproximadas do centro do Brasil
+    const zoomLevel = 3; // Zoom ajustado para exibir o país inteiro
 
     return (
         <MapContainer
-        center={position}
-        zoom={13}
-        scrollWheelZoom
-        className="h-[400px] w-[90%] lg:w-1/2"
-        key={position.toString()} 
-    >
-        <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution="&copy; OpenStreetMap contributors"
-        />
-        <Marker position={position} icon={customIcon}>
-            <Popup>São Paulo, Brasil</Popup>
-        </Marker>
-    </MapContainer>
+            center={centerPosition}
+            zoom={zoomLevel}
+            scrollWheelZoom
+            className="h-[400px] w-[90%] lg:w-[45%]"
+            key={centerPosition.toString()} 
+        >
+            <TileLayer
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                attribution="&copy; OpenStreetMap contributors"
+            />
+            <Marker position={centerPosition} icon={customIcon}>
+                <Popup>Brasil</Popup>
+            </Marker>
+        </MapContainer>
     );
 }

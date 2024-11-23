@@ -55,7 +55,7 @@ export default function DonationSection() {
               phsilva
             </a>
             <a
-              href="https://github.com/desenvolvedor1"
+              href="https://github.com/devmateuscarvalho"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center text-black hover:text-gray-800 text-sm"
